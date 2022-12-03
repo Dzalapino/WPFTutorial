@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
         Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
-    </StackPanel>
+    <Grid>
+        <Button x:Name="myButton" Content="Button To Be Referenced " HorizontalAlignment="Left" Margin="50,27,0,0" VerticalAlignment="Top"/>
+    </Grid>
 </Window>
