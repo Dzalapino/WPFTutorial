@@ -6,8 +6,34 @@
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
         Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
-    </StackPanel>
+    <Grid x:Name="mainGrid">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+            TextBlock:
+            <LineBreak/>
+            <Bold>Some bold text</Bold>
+            <LineBreak/>
+            <Italic>Some italic text</Italic>
+            <LineBreak/>
+            <Italic>
+                <Bold>
+                    Some bold italic text!
+                </Bold>
+            </Italic>
+            <LineBreak/>
+            Go to the <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://en.wikipedia.org/wiki/Main_Page">wikipedia</Hyperlink> page and start being smarter
+        </TextBlock>
+        <TextBlock Margin="10,100, 10, 315" TextTrimming="CharacterEllipsis">
+            Watch me trim!: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </TextBlock>
+        <TextBlock Margin="10,120,10,222" TextWrapping="Wrap" Foreground="Black">
+            Watch me wrap!: <Span Foreground="SeaShell" Background="#FFE30808">Lorem ipsum</Span> dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </TextBlock>
+        <TextBlock x:Name="theLastOfTextBlocks" HorizontalAlignment="Left" Margin="10,217,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    </Grid>
 </Window>
