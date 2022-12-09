@@ -7,7 +7,19 @@
         mc:Ignorable="d"
         Title="WPF Tutorial" Height="450" Width="800">
     <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
+        <Label Margin="16, 16, 16, 0" BorderThickness="1" BorderBrush="Black">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="https://pics.freeicons.io/uploads/icons/png/15378291991558965373-512.png" Width="64" Height="64"/>
+                <AccessText Text="Message" FontSize="64" Width="254"/>
+            </StackPanel>
+        </Label>
+        <TextBox FontSize="64" Margin="16" AcceptsReturn="True" TextWrapping="Wrap" 
+                 SpellCheck.IsEnabled="True" Language="pl" 
+                 Background="AliceBlue" Foreground="DarkBlue"
+                 Text="Write somethin pal!"/>        
+        <TextBox FontSize="64" Margin="16" AcceptsReturn="True" TextWrapping="Wrap" 
+                 SpellCheck.IsEnabled="True" Language="pl" 
+                 Background="AliceBlue" Foreground="DarkBlue"
+                 Text="You can't write here!" IsReadOnly="True"/>
     </StackPanel>
 </Window>
