@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Media;
 
 namespace WPFTutorial
@@ -14,27 +13,34 @@ namespace WPFTutorial
             InitializeComponent();
         }
 
-        private void MyButton_Click(object sender, RoutedEventArgs e)
+        private void rbKorwin_Checked(object sender, RoutedEventArgs e)
         {
-            var rnd = new Random();
-            myLabel.Foreground = new SolidColorBrush(Color.FromArgb(255, (byte)rnd.Next(256), (byte)rnd.Next(256), (byte)rnd.Next(256)));
-            ++myLabel.FontSize;
+            lbResult.Content = "Nice one, someone is smart :---)))";
+            lbResult.Foreground = Brushes.LightGreen;
         }
 
-        private void MyButton_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void rbMemtzen_Checked(object sender, RoutedEventArgs e)
         {
-            myLabel.Foreground = Brushes.Black;
-            --myLabel.FontSize;
+            lbResult.Content = "Nice one, someone is smart :---)))";
+            lbResult.Foreground = Brushes.LightGreen;
         }
 
-        private void MyButton_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        private void rbDuda_Checked(object sender, RoutedEventArgs e)
         {
-            myButton.BorderThickness = new Thickness(4, 4, 4, 4);
+            lbResult.Content = "Maybe think a little bit longer pal....";
+            lbResult.Foreground = Brushes.IndianRed;
         }
 
-        private void MyButton_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        private void rbTusk_Checked(object sender, RoutedEventArgs e)
         {
-            myButton.BorderThickness = new Thickness(2, 2, 2, 2);
+            lbResult.Content = "Maybe think a little bit longer pal....";
+            lbResult.Foreground = Brushes.IndianRed;
+        }
+
+        private void rbZananberg_Checked(object sender, RoutedEventArgs e)
+        {
+            lbResult.Content = "Maybe think a little bit longer pal....";
+            lbResult.Foreground = Brushes.IndianRed;
         }
     }
 }

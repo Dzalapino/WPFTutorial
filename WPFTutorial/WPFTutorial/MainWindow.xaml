@@ -5,14 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="450" Width="800">
+        Title="WPF Tutorial"
+        WindowState="Maximized">
     <StackPanel>
-        <Button Name="myButton"
-                Background="BlueViolet" Foreground="AntiqueWhite" BorderThickness="2" BorderBrush="Black" 
-                FontStyle="Italic" FontWeight="Bold" ToolTip="I'm your best button!"
-                Width="150" Height="50"
-                MouseEnter="MyButton_MouseEnter" MouseLeave="MyButton_MouseLeave"
-                Click="MyButton_Click" MouseDoubleClick="MyButton_MouseDoubleClick">Click me!</Button>
-        <Label Name="myLabel" FontSize="20" HorizontalAlignment="Center">Hello World</Label>
+        <Label FontWeight="Bold">Who do you vote for?</Label>
+        <RadioButton x:Name="rbKorwin" GroupName="Presidents" VerticalContentAlignment="Center" Checked="rbKorwin_Checked">
+            <WrapPanel>
+                <Image Source="https://d-art.ppstatic.pl/kadry/k/r/1/b2/5f/5388b00d0ae1a_o_large.jpg" Height="200" Width="200"></Image>
+                <Label VerticalAlignment="Center">Korwin 👑</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton x:Name="rbMemtzen" GroupName="Presidents" VerticalContentAlignment="Center" Checked="rbMemtzen_Checked">
+            <WrapPanel>
+                <Image Source="https://www.blasty.pl/m/upload/images/large/2021/03/kiedy-rodzice-zabiora_2021-03-02_10-36-26.jpg" Height="200" Width="200"></Image>
+                <Label VerticalAlignment="Center">Memtzen👑</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton x:Name="rbDuda" GroupName="Presidents" Checked="rbDuda_Checked">Duda (popis 🤮)</RadioButton>
+        <RadioButton x:Name="rbTusk" GroupName="Presidents" Checked="rbTusk_Checked">Tusk (popis 🤮)</RadioButton>
+        <RadioButton x:Name="rbZananberg" GroupName="Presidents" Checked="rbZananberg_Checked">Zananberg (lewica fuj)</RadioButton>
+        
+        <Label FontWeight="Bold">Are you sure about that?</Label>
+        <RadioButton GroupName="Certainty">yes</RadioButton>
+        <RadioButton GroupName="Certainty">no</RadioButton>
+        <RadioButton GroupName="Certainty">I don't know</RadioButton>
+
+        <Label x:Name="lbResult" FontSize="64" HorizontalAlignment="Center"/>
     </StackPanel>
 </Window>
