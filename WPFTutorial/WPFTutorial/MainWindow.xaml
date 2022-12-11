@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="WPF Tutorial" Height="450" Width="800">
     <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
+        <Button Name="myButton"
+                Background="BlueViolet" Foreground="AntiqueWhite" BorderThickness="2" BorderBrush="Black" 
+                FontStyle="Italic" FontWeight="Bold" ToolTip="I'm your best button!"
+                Width="150" Height="50"
+                MouseEnter="MyButton_MouseEnter" MouseLeave="MyButton_MouseLeave"
+                Click="MyButton_Click" MouseDoubleClick="MyButton_MouseDoubleClick">Click me!</Button>
+        <Label Name="myLabel" FontSize="20" HorizontalAlignment="Center">Hello World</Label>
     </StackPanel>
 </Window>
