@@ -8,28 +8,17 @@
         Title="WPF Tutorial"
         WindowState="Maximized">
     <StackPanel>
-        <Label FontWeight="Bold">Who do you vote for?</Label>
-        <RadioButton x:Name="rbKorwin" GroupName="Presidents" VerticalContentAlignment="Center" Checked="rbKorwin_Checked">
+        <Label FontWeight="Bold">Toppings</Label>
+        <CheckBox x:Name="cbParent" IsThreeState="True" Checked="cbParent_Changed">Select all</CheckBox>
+        <CheckBox Margin="15,5" x:Name="cbCheese" VerticalContentAlignment="Center" 
+                  Checked="cbCheese_Checked" Unchecked="cbCheese_Unchecked">
             <WrapPanel>
-                <Image Source="https://d-art.ppstatic.pl/kadry/k/r/1/b2/5f/5388b00d0ae1a_o_large.jpg" Height="200" Width="200"></Image>
-                <Label VerticalAlignment="Center">Korwin 👑</Label>
-            </WrapPanel>
-        </RadioButton>
-        <RadioButton x:Name="rbMemtzen" GroupName="Presidents" VerticalContentAlignment="Center" Checked="rbMemtzen_Checked">
-            <WrapPanel>
-                <Image Source="https://www.blasty.pl/m/upload/images/large/2021/03/kiedy-rodzice-zabiora_2021-03-02_10-36-26.jpg" Height="200" Width="200"></Image>
-                <Label VerticalAlignment="Center">Memtzen👑</Label>
-            </WrapPanel>
-        </RadioButton>
-        <RadioButton x:Name="rbDuda" GroupName="Presidents" Checked="rbDuda_Checked">Duda (popis 🤮)</RadioButton>
-        <RadioButton x:Name="rbTusk" GroupName="Presidents" Checked="rbTusk_Checked">Tusk (popis 🤮)</RadioButton>
-        <RadioButton x:Name="rbZananberg" GroupName="Presidents" Checked="rbZananberg_Checked">Zananberg (lewica fuj)</RadioButton>
-        
-        <Label FontWeight="Bold">Are you sure about that?</Label>
-        <RadioButton GroupName="Certainty">yes</RadioButton>
-        <RadioButton GroupName="Certainty">no</RadioButton>
-        <RadioButton GroupName="Certainty">I don't know</RadioButton>
-
-        <Label x:Name="lbResult" FontSize="64" HorizontalAlignment="Center"/>
+                <Image Width="64" Source="https://wingmarts.com/media/user_39117/274108/KTZ-00004.jpg"></Image>
+                <Label x:Name="lbCheese">Extra cheese</Label>
+            </WrapPanel> 
+        </CheckBox>
+        <CheckBox Margin="15,5" x:Name="cbTuna" Checked="cbToppings_Changed" Unchecked="cbToppings_Changed">Tuna</CheckBox>
+        <CheckBox Margin="15,5" x:Name="cbHam" Checked="cbToppings_Changed" Unchecked="cbToppings_Changed">Ham</CheckBox>
+        <CheckBox Margin="15,5" x:Name="cbPepperoni" Checked="cbToppings_Changed" Unchecked="cbToppings_Changed">Pepperoni</CheckBox>
     </StackPanel>
 </Window>

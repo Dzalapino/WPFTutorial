@@ -13,34 +13,35 @@ namespace WPFTutorial
             InitializeComponent();
         }
 
-        private void rbKorwin_Checked(object sender, RoutedEventArgs e)
+        private void cbCheese_Unchecked(object sender, RoutedEventArgs e)
         {
-            lbResult.Content = "Nice one, someone is smart :---)))";
-            lbResult.Foreground = Brushes.LightGreen;
+            lbCheese.Background = Brushes.White;
         }
 
-        private void rbMemtzen_Checked(object sender, RoutedEventArgs e)
+        private void cbCheese_Checked(object sender, RoutedEventArgs e)
         {
-            lbResult.Content = "Nice one, someone is smart :---)))";
-            lbResult.Foreground = Brushes.LightGreen;
+            lbCheese.Background = Brushes.Gray;
         }
 
-        private void rbDuda_Checked(object sender, RoutedEventArgs e)
+        private void cbParent_Changed(object sender, RoutedEventArgs e)
         {
-            lbResult.Content = "Maybe think a little bit longer pal....";
-            lbResult.Foreground = Brushes.IndianRed;
+            bool newVal = (cbParent.IsChecked == true);
+            cbCheese.IsChecked = newVal;
+            cbTuna.IsChecked = newVal;
+            cbHam.IsChecked = newVal;
+            cbPepperoni.IsChecked = newVal;
         }
-
-        private void rbTusk_Checked(object sender, RoutedEventArgs e)
+        private void cbToppings_Changed(object sender, RoutedEventArgs e)
         {
-            lbResult.Content = "Maybe think a little bit longer pal....";
-            lbResult.Foreground = Brushes.IndianRed;
-        }
-
-        private void rbZananberg_Checked(object sender, RoutedEventArgs e)
-        {
-            lbResult.Content = "Maybe think a little bit longer pal....";
-            lbResult.Foreground = Brushes.IndianRed;
+            cbParent.IsChecked = null;
+            if (cbCheese.IsChecked == true && cbTuna.IsChecked == true && cbHam.IsChecked == true && cbPepperoni.IsChecked == true)
+            {
+                cbParent.IsChecked = true;
+            }
+            if (cbCheese.IsChecked == false && cbTuna.IsChecked == false && cbHam.IsChecked == false && cbPepperoni.IsChecked == false)
+            {
+                cbParent.IsChecked = false;
+            }
         }
     }
 }
