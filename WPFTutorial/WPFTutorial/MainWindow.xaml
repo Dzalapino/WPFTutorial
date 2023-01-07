@@ -5,9 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
+        Title="WPF Tutorial" Height="450" Width="900">
+    <StackPanel VerticalAlignment="Center" Margin="20">
+        <Slider 
+            x:Name="mySlider" Minimum="2" Maximum="100" Value="50"
+            TickPlacement="BottomRight" TickFrequency="2" IsSnapToTickEnabled="True"
+            ValueChanged="mySlider_ValueChanged"></Slider>
+        <TextBlock 
+            x:Name="myTextBlock" Height="250" TextWrapping="Wrap" 
+            FontSize="{Binding ElementName=mySlider, Path=Value, UpdateSourceTrigger=PropertyChanged}">
+            <Run Text="This is the font size: "/>
+            <Run Text="{Binding ElementName=mySlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
+        </TextBlock>
     </StackPanel>
 </Window>
