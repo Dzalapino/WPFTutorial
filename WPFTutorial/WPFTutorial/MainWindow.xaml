@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
+        Title="WPF Tutorial" Height="900" Width="1800">
+    <StackPanel Margin="10">
+        <Label FontSize="25">Name:</Label>
+        <TextBox FontSize="25"></TextBox>
+        <Label FontSize="25">Password:</Label>
+        <PasswordBox FontSize="25" PasswordChar="*" MaxLength="4"></PasswordBox>
+        <Image 
+            x:Name="myImage"
+            MouseUp="Image_MouseUp"
+            Source="pack://application:,,,/Images/homer.png" HorizontalAlignment="Left" Height="637" Width="487"/>
     </StackPanel>
 </Window>
