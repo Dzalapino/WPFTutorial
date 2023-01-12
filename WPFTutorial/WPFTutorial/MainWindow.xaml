@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
-    </StackPanel>
+        Title="WPF Tutorial" Height="800" Width="1000">
+    <Grid>
+        <Viewbox Stretch="Uniform">
+            <Calendar
+                x:Name="myCalendar"></Calendar>
+        </Viewbox>
+    </Grid>
 </Window>
