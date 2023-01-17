@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="800" Width="1000">
-    <Grid>
+        Title="WPF Tutorial" Height="700" Width="500">
+    <StackPanel>
         <Viewbox Stretch="Uniform">
             <Calendar
-                x:Name="myCalendar"></Calendar>
+                SelectedDate="01.02.2023"
+                DisplayMode="Month"
+                x:Name="myCalendar"
+                SelectedDatesChanged="myCalendar_SelectedDatesChanged">
+                <Calendar.BlackoutDates>
+                    <CalendarDateRange Start="01.05.2023" End="01.09.2023"></CalendarDateRange>
+                </Calendar.BlackoutDates>
+            </Calendar>
         </Viewbox>
-    </Grid>
+        <TextBlock x:Name="myTextBlock"></TextBlock>
+    </StackPanel>
 </Window>

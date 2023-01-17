@@ -13,5 +13,13 @@ namespace WPFTutorial
             InitializeComponent();
             myCalendar.SelectedDate = DateTime.Now;
         }
+
+        private void myCalendar_SelectedDatesChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (myTextBlock != null)
+            {
+                myTextBlock.Text = myCalendar.SelectedDate.ToString();
+            }
+        }
     }
 }
