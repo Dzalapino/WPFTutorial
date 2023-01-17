@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace WPFTutorial
 {
@@ -20,6 +21,11 @@ namespace WPFTutorial
             {
                 myTextBlock.Text = myCalendar.SelectedDate.ToString();
             }
+        }
+
+        private void myDatePicker_SelectedDateChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            MessageBox.Show("Date has been changed to " + (sender as DatePicker).SelectedDate ?? "null");
         }
     }
 }
