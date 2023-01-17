@@ -7,7 +7,24 @@
         mc:Ignorable="d"
         Title="WPF Tutorial" Height="450" Width="800">
     <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
+        <Expander Expanded="Expander_Expanded">
+            <Expander.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="80" Source="pack://application:,,,/Images/homer.png"></Image>
+                    <TextBlock VerticalAlignment="Center" FontSize="20">Click me to expand. Click again to hide my content</TextBlock>
+                </StackPanel>
+            </Expander.Header>
+            <StackPanel>
+                <Button Width="100">Click me!</Button>
+                <TextBlock TextWrapping="Wrap" FontSize="20">
+                “You have power over your mind - not outside events. ... <LineBreak/>
+                “Dwell on the beauty of life. ... <LineBreak/>
+                “The happiness of your life depends upon the quality of your thoughts.” ... <LineBreak/>
+                “Everything we hear is an opinion, not a fact. ... <LineBreak/>
+                “Waste no more time arguing about what a good man should be.
+                </TextBlock>
+                <DatePicker SelectedDate="09/11/2001"></DatePicker>
+            </StackPanel>
+        </Expander>
     </StackPanel>
 </Window>
