@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
-    </StackPanel>
+        Title="WPF Tutorial" Height="200" Width="200">
+    <ScrollViewer>
+        <StackPanel>
+            <Button>Button 1</Button>
+            <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button VerticalAlignment="Top">Button 21</Button>
+                <Button VerticalAlignment="Bottom">Button 22</Button>
+                <Button VerticalAlignment="Center">Button 23</Button>
+            </StackPanel>
+            <Button>Button 3</Button>
+            <Button HorizontalAlignment="Center">Button 4</Button>
+            <Button HorizontalAlignment="Left">Button 5</Button>
+            <Button HorizontalAlignment="Right">Button 6</Button>
+            <Button HorizontalAlignment="Stretch">Button 7</Button>
+            <Button HorizontalAlignment="Center">Button</Button>
+            <Button HorizontalAlignment="Center">Button</Button>
+            <Button HorizontalAlignment="Center">Button</Button>
+        </StackPanel>
+    </ScrollViewer>
 </Window>
