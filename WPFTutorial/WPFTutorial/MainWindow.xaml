@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="WPF Tutorial" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Hello in the WPF Tutorial"/>
-        <Button Content="Click me!"/>
-    </StackPanel>
+        Title="WPF Tutorial" Height="450" Width="450">
+    <Canvas Opacity=".65">
+        <Button Canvas.Left="5" Content="Left"/>
+        <Button Canvas.Right="5" Content="Right"/>
+        <Rectangle Panel.ZIndex="1" Width="100" Height="100" Fill="Aqua" Canvas.Bottom="0" Canvas.Right="0"></Rectangle>
+        <Rectangle Panel.ZIndex="0" Width="100" Height="100" Fill="Blue" Canvas.Bottom="50" Canvas.Right="50"></Rectangle>
+    </Canvas>
 </Window>
